@@ -12,6 +12,9 @@ function! quickrun#execute()
   if extension == "go"
     let runner = "go run"
   endif
+  if extension == "py"
+    let runner = "python"
+  endif
   if runner == ""
     echoerr "File type not supported!"
   else
