@@ -1,4 +1,4 @@
-function! quickrun#execute(fullscreen)
+function! quickrun#execute(isfull)
   silent! wall
   let file_name = expand('%:t:r')
   let extension = expand('%:e')
@@ -21,10 +21,10 @@ function! quickrun#execute(fullscreen)
   if runner == ""
     echoerr "File type not supported!"
   else
-    if fullscreen == "true"
+    if a:isfull == "true"
       execute ":term ".runner." ".file_name.".".extension
     endif
-    if fullscreen == "false"
+    if a:isfull == "false"
       execute ":!".runner." ".file_name.".".extension
     endif
   endif
