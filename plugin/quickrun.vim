@@ -15,6 +15,9 @@ function! quickrun#execute()
   if extension == "py"
     let runner = "python"
   endif
+  if extension == "swift"
+    let runner = "swift"
+  endif
   if runner == ""
     echoerr "File type not supported!"
   else
