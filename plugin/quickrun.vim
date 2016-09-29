@@ -21,7 +21,7 @@ function! quickrun#execute()
   if runner == ""
     echoerr "File type not supported!"
   else
-    execute "!".runner." ".file_name.".".extension
+    execute ":term ".runner." ".file_name.".".extension
   endif
 endfunction
 
