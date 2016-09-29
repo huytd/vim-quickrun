@@ -21,14 +21,14 @@ function! quickrun#execute(fullscreen)
   if runner == ""
     echoerr "File type not supported!"
   else
-    if fullscreen == true
+    if fullscreen == "true"
       execute ":term ".runner." ".file_name.".".extension
     endif
-    if fullscreen == false 
+    if fullscreen == "false"
       execute ":!".runner." ".file_name.".".extension
     endif
   endif
 endfunction
 
-command! QuickRunExecute call quickrun#execute(false)
-command! QuickRunExecuteFullScreen call quickrun#execute(true)
+command! QuickRunExecute call quickrun#execute("false")
+command! QuickRunExecuteFullScreen call quickrun#execute("true")
