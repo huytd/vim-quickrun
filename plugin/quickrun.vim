@@ -31,7 +31,7 @@ function! quickrun#execute(isfull)
     echoerr "File type not supported!"
   else
     if runner == "gcc"
-      execute "!(gcc ".file_name." -o temp && ./temp)"
+      execute "!(gcc ".file_name.".".extension." -o temp && ./temp)"
     else
       if a:isfull == "true"
         execute ":term ".runner." ".file_name.".".extension
