@@ -19,20 +19,27 @@ function! quickrun#execute(isfull)
     let runner = "swift"
   endif
   if extension == "c"
-    let runner = "gcc"
+    let runner = "compile"
+    let compiler = "gcc"
   endif
   if extension == "cc"
-    let runner = "gcc"
+    let runner = "compile"
+    let compiler = "gcc"
   endif
   if extension == "cpp"
-    let runner = "gcc"
+    let runner = "compile"
+    let compiler = "gcc"
+  endif
+  if extension == "hs"
+    let runner = "compile"
+    let compiler = "ghc"
   endif
   if runner == ""
     echoerr "File type not supported!"
   else
     if a:isfull == "true"
-      if runner == "gcc"
-        execute "!term (gcc ".file_name.".".extension." -o ".file_name." && ./".file_name.")"
+      if runner == "compile"
+        execute "!term (".compiler." ".file_name.".".extension." -o ".file_name." && ./".file_name.")"
       else
         execute ":term ".runner." ".file_name.".".extension
       endif
