@@ -45,8 +45,8 @@ function! quickrun#execute(isfull)
       endif
     endif
     if a:isfull == "false"
-      if runner == "gcc"
-        execute "!(gcc ".file_name.".".extension." -o ".file_name." && ./".file_name.")"
+      if runner == "compile"
+        execute "!(".compiler." ".file_name.".".extension." -o ".file_name." && ./".file_name.")"
       else
         execute ":!".runner." ".file_name.".".extension
       endif
