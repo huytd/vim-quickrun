@@ -2,6 +2,15 @@
 
 A plugin to quickly execute `JavaScript`, `Ruby`, `Golang`, `Python`,... files with just a single command.
 
+## Supported Languages
+- JavaScript
+- Ruby
+- Python
+- Golang
+- C/C++
+- Haskell
+- Swift
+
 ## Installation
 
 You can install this plugin with any plugin manager, or install manually:
