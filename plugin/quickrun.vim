@@ -34,6 +34,10 @@ function! quickrun#execute(isfull)
     let runner = "compile"
     let compiler = "ghc"
   endif
+  if extension == "rs"
+    let runner = "compile"
+    let compiler = "rustc"
+  endif
   if runner == ""
     echoerr "File type not supported!"
   else
