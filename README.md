@@ -10,6 +10,7 @@ A plugin to quickly execute `JavaScript`, `Ruby`, `Golang`, `Python`,... files w
 - C/C++
 - Haskell
 - Swift
+- Rust
 
 ## Installation
 
