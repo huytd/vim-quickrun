@@ -20,15 +20,15 @@ function! quickrun#execute(isfull)
   endif
   if extension == "c"
     let runner = "compile"
-    let compiler = "gcc"
+    let compiler = "gcc -g"
   endif
   if extension == "cc"
     let runner = "compile"
-    let compiler = "gcc"
+    let compiler = "gcc -g"
   endif
   if extension == "cpp"
     let runner = "compile"
-    let compiler = "gcc"
+    let compiler = "gcc -g"
   endif
   if extension == "hs"
     let runner = "compile"
