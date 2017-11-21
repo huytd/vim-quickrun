@@ -6,6 +6,9 @@ function! quickrun#execute(isfull)
   if extension == "js"
     let runner = "node"
   endif
+  if extension == "ts"
+    let runner = "ts-node"
+  endif
   if extension == "rb"
     let runner = "ruby"
   endif
