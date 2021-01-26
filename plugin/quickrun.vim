@@ -27,11 +27,11 @@ function! quickrun#execute(isfull)
   endif
   if extension == "cc"
     let runner = "compile"
-    let compiler = "g++ -g"
+    let compiler = "g++ -std=c++1z -g"
   endif
   if extension == "cpp"
     let runner = "compile"
-    let compiler = "g++ -g"
+    let compiler = "g++ -std=c++1z -g"
   endif
   if extension == "hs"
     let runner = "compile"
